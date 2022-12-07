@@ -3,15 +3,15 @@
     <h1>Login Form</h1>
     <form method="post">
         <div class="txt_field">
-            <input #acno type="text" name="acno" id="acno" [placeholder]="data">
+            <input [(ngModel)]="acno" type="text" name="acno" id="acno" [placeholder]="data">
             <label>Account Number</label>
         </div>
         <div class="txt_field">
-            <input #psw type="password" name="psw" id="psw">
+            <input [(ngModel)]="psw" type="password" name="psw" id="psw">
             <label>Password</label>
         </div>
         <div class="pass">Forgot Password?</div>
-        <input  type= "submit" value="LOGIN" (click)="login(acno,psw)">
+        <input  type= "submit" value="LOGIN" (click)="login()">
         <div class="signup_link">
             Not a member?<a href="#">Register now</a>
         </div>

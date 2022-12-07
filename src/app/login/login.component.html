@@ -3,15 +3,15 @@
     <h1>Login Form</h1>
     <form method="post">
         <div class="txt_field">
-            <input (change)="acnochange($event)" type="text" name="acno" id="acno" [placeholder]="data">
+            <input #acno type="text" name="acno" id="acno" [placeholder]="data">
             <label>Account Number</label>
         </div>
         <div class="txt_field">
-            <input (change)="pswchange($event)" type="password" name="psw" id="psw">
+            <input #psw type="password" name="psw" id="psw">
             <label>Password</label>
         </div>
         <div class="pass">Forgot Password?</div>
-        <input  type= "submit" value="LOGIN" (click)="login()">
+        <input  type= "submit" value="LOGIN" (click)="login(acno,psw)">
         <div class="signup_link">
             Not a member?<a href="#">Register now</a>
         </div>

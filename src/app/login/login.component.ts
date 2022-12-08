@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AsyncSubject } from 'rxjs';
 
 @Component({
@@ -20,7 +21,7 @@ export class LoginComponent implements OnInit {
     1003:{acno:1003,username:"Liju",password:123,balance:0}
   }
 
-  constructor() { }
+  constructor( private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -34,6 +35,7 @@ login(){
     
    if(psw==userDetails[acno]['password']){
      alert("Login Success")
+     this.router.navigateByUrl('Dashboard')
    }
    else{
     alert("Incorrect Password")
